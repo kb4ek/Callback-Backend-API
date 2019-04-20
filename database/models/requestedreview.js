@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const RequestedReviewSchema = new Schema({
-  username: {
+  userName: {
     type: String,
     required: true
   },
@@ -46,7 +46,7 @@ const RequestedReviewSchema = new Schema({
 });
 
 const ReviewCommentSchema = new Schema({
-  username: {
+  userName: {
     type: String,
     required: true
   },
