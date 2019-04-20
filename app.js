@@ -13,6 +13,13 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 
+app.get('/', (req, res) => {
+  console.log(1);
+  res.status(200).json({
+    result: ok
+  });
+})
+
 app.use('/', apiController);
 
 app.set('view engine', 'jade');
