@@ -17,7 +17,11 @@ const ReviewComment = async (req, res) => {
         content
       };
 
-      await RequestedReview.create(Comment)
+      await RequestedReview.findOne({
+
+      }).then(RequestedReview.update({
+        reviews: Comment
+      }))
 
       res.status(200).json({
         result: {
