@@ -67,3 +67,5 @@ const ReviewCommentSchema = new Schema({
     default: Date.now
   }
 });
+
+module.exports = ('RequestedReview', RequestedReviewSchema);
