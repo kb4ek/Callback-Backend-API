@@ -1,4 +1,4 @@
-FROM aws/codebuild/nodejs:10.14.1-1.7.0
+FROM node:carbon
 
 RUN mkdir -p /app
 WORKDIR /app
