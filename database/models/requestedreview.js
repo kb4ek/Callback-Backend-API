@@ -1,6 +1,29 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+const ReviewCommentSchema = new Schema({
+  userName: {
+    type: String,
+    required: true
+  },
+  filePath: {
+    type: String,
+    required: true
+  },
+  lineNumber: {
+    type: Number,
+    required: true
+  },
+  content: {
+    type: String,
+    required: true
+  },
+  createAt: {
+    type: Date,
+    default: Date.now
+  }
+});
+
 const RequestedReviewSchema = new Schema({
   userName: {
     type: String,
@@ -42,29 +65,6 @@ const RequestedReviewSchema = new Schema({
     type: [ReviewCommentSchema],
     required: false,
     default: []
-  }
-});
-
-const ReviewCommentSchema = new Schema({
-  userName: {
-    type: String,
-    required: true
-  },
-  filePath: {
-    type: String,
-    required: true
-  },
-  lineNumber: {
-    type: Number,
-    required: true
-  },
-  content: {
-    type: String,
-    required: true
-  },
-  createAt: {
-    type: Date,
-    default: Date.now
   }
 });
 
