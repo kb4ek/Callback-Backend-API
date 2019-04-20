@@ -65,7 +65,11 @@ const RequestedReviewSchema = new Schema({
     type: [ReviewCommentSchema],
     required: false,
     default: []
+  },
+  date: {
+    type: Date,
+    default: Date.now
   }
 });
 
-module.exports = ('RequestedReview', RequestedReviewSchema);
+module.exports = mongoose.model('RequestedReview', RequestedReviewSchema);
