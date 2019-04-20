@@ -67,4 +67,4 @@ const RequestReview = async (req, res, next) => {
   }
 }
 
-export default RequestReview;
+module.exports = RequestReview;
