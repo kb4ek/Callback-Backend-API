@@ -9,14 +9,14 @@ phases:
   build:
     commands:
       - echo docker build started
-      # - docker build -t honeycombo-api:latest .
+      - docker build -t honeycombo-api:latest .
       - echo docker build stopped
       - echo docker tag started
-      # - docker tag honeycombo-api:latest 460515444513.dkr.ecr.ap-northeast-2.amazonaws.com/honeycombo-api
+      - docker tag honeycombo-api:latest 460515444513.dkr.ecr.ap-northeast-2.amazonaws.com/honeycombo-api
       - echo docker tag stopped
       - echo docker push started
-      # - docker push 460515444513.dkr.ecr.ap-northeast-2.amazonaws.com/honeycombo-api:latest
+      - docker push 460515444513.dkr.ecr.ap-northeast-2.amazonaws.com/honeycombo-api:latest
       - echo docker push stopped
       - echo ecs update service started
-      # - aws ecs update-service --cluster HoneyCombo-api-cluster --service honeycombo-api --force-new-deployment
+      - aws ecs update-service --cluster HoneyCombo-api-cluster --service honeycombo-api --force-new-deployment
       - echo ecs update service stopped
