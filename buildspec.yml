@@ -4,9 +4,12 @@ phases:
   install:
     commands:
       - npm install
+      - $(aws ecr get-login --no-include-email --region ap-northeast-2)
   build:
     commands:
       - docker build -t honeycombo-api:latest .
+  post_build:
+    commands:
       - docker tag honeycombo-api:latest 460515444513.dkr.ecr.ap-northeast-2.amazonaws.com/honeycombo-api
       - docker push 460515444513.dkr.ecr.ap-northeast-2.amazonaws.com/honeycombo-api:latest
       - aws ecs update-service --cluster HoneyCombo-api-cluster --service honeycombo-api --force-new-deployment
