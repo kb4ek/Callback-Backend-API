@@ -12,4 +12,6 @@ db.once('open', () => {
   console.log('✓ DB connection success.');
 });
 
-mongoose.connect('mongodb://13.125.183.20:27017/callback');
+mongoose.connect('mongodb://13.125.183.20:27017/callback', {
+  useNewUrlParser: true
+});
