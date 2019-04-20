@@ -15,6 +15,8 @@ app.use(bodyParser.urlencoded({
 
 app.use('/', apiController);
 
+app.set('view engine', 'jade');
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
