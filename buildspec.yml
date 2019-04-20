@@ -9,7 +9,7 @@ phases:
   build:
     commands:
       - echo docker build started
-      - docker build -t honeycombo-api:latest . -f Dockerfile-CodeBuild
+      - docker build -t honeycombo-api:latest .
       - echo docker build stopped
       - echo docker tag started
       - docker tag honeycombo-api:latest 460515444513.dkr.ecr.ap-northeast-2.amazonaws.com/honeycombo-api
